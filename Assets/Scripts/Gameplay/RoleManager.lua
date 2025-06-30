@@ -11,7 +11,7 @@ local roles = {}            -- playerID ➜ "Hunter"/"Prop"
 local function setRole(player, role)
     roles[player.id] = role
     -- sync to clients so they can read it later
-    player:SetSharedField("role", role)
+    player:SetSharedValue("role", role)
 end
 
 ------------------------------------------------
