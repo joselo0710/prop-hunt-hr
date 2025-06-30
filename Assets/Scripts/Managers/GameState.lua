@@ -4,7 +4,7 @@
 ----------------------------------------------------------------
 local current = "Lobby"
 local timer   = 0
-local DURATION = { Hide = 30, Hunt = 120, RoundEnd = 8 }
+local DURATION = { Hide = 30, Hunt = 30, RoundEnd = 8 }
 
 local function switch(next)
     current, timer = next, 0
