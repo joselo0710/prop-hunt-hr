@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _version: 1
   _publishedId: 
-  _worldPrefab: {fileID: 9171886453793455768, guid: b6627831c163ce14aa4d46519f0cc8fb,
+  _worldPrefab: {fileID: 4620700218394494300, guid: 35e56b7b0a6ef3f40a9d0ceadc237c72,
     type: 3}
   _scenePrefab: {fileID: 8457444051872364791, guid: 4ea8fc71d0d33aa4794e860bd8a9318a,
     type: 3}
