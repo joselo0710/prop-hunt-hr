@@ -19,11 +19,11 @@ using UnityEditor;
 
 namespace Highrise.Lua.Generated
 {
-    [AddComponentMenu("Lua/RoleManager")]
-    [LuaRegisterType(0x82311b69973f5998, typeof(LuaBehaviour))]
-    public class RoleManager : LuaBehaviourThunk
+    [AddComponentMenu("Lua/TestStarter")]
+    [LuaRegisterType(0xb450fb0848da23f4, typeof(LuaBehaviour))]
+    public class TestStarter : LuaBehaviourThunk
     {
-        private const string s_scriptGUID = "d140b3ec8d6cfd84883e20f2d9c71ae9";
+        private const string s_scriptGUID = "acf262a041d24d543bb18bb00a89a927";
         public override string ScriptGUID => s_scriptGUID;
 
 
@@ -38,7 +38,7 @@ namespace Highrise.Lua.Generated
         }
         
 #if HR_STUDIO
-        [MenuItem("CONTEXT/RoleManager/Edit Script")]
+        [MenuItem("CONTEXT/TestStarter/Edit Script")]
         private static void EditScript()
         {
             VisualStudioCodeOpener.OpenPath(AssetDatabase.GUIDToAssetPath(s_scriptGUID));

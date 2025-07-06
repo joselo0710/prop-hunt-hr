@@ -8,4 +8,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PropHunt.unity
     guid: 3d97b014f52721147ba461f2a8133078
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: f6e791e554caf8748a7e5f0ea752db09,
+      type: 2}

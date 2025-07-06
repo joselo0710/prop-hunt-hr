@@ -1,22 +1,15 @@
 --!Type(ClientAndServer)
-----------------------------------------------------------------
--- GameState.lua – drives Lobby → Hide → Hunt → RoundEnd loop
-----------------------------------------------------------------
+
+-- Shared variables
 local current = "Lobby"
 local timer   = 0
-local DURATION = { Hide = 30, Hunt = 30, RoundEnd = 8 }
+local DURATION = { Hide = 5, Hunt = 10, RoundEnd = 5 }
 
-local function switch(next)
-    current, timer = next, 0
-    print("PHASE → " .. next)
-end
-
--- called automatically **once** when the object spawns
+-- 🔹 CLIENT side
 function self:ClientStart()
-    switch("Lobby")
+    print("✅ GameState running on Client")
 end
 
--- called every frame on the client
 function self:ClientUpdate()
     timer = timer + Time.deltaTime
 
@@ -24,4 +17,15 @@ function self:ClientUpdate()
     if current == "Hide"     and timer > DURATION.Hide   then switch("Hunt")     end
     if current == "Hunt"     and timer > DURATION.Hunt   then switch("RoundEnd") end
     if current == "RoundEnd" and timer > DURATION.RoundEnd then switch("Lobby")  end
+end
+
+-- 🔹 SERVER side (add this to avoid silent fail)
+function self:ServerStart()
+    print("✅ GameState running on Server")
+end
+
+-- 🔹 Shared logic
+function switch(next)
+    current, timer = next, 0
+    print("PHASE → " .. next)
 end
